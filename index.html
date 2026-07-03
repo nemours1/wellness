@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0121)file:///C:/Users/nuser08/Downloads/ZENCORE__%E3%82%A6%E3%82%A7%E3%83%AB%E3%83%8D%E3%82%B9WEB%E8%B3%87%E6%96%99%20(1).html -->
+<!-- saved from url=(0121)file:///C:/Users/nuser08/Downloads/ZENCORE__%E3%82%A6%E3%82%A7%E3%83%AB%E3%83%8D%E3%82%B9WEB%E8%B3%87%E6%96%99%20(2).html -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -661,6 +661,7 @@
     section { padding: 60px 24px; }
     #s1 .hero-inner { padding: 60px 24px; }
     .concept-grid, .space-grid, .why-grid, .bouen-grid, .plan-grid, .track-grid { grid-template-columns: 1fr; }
+    .space-grid.with-photo { grid-template-columns: 1fr; }
     .cert-grid, .use-grid, .strengths { grid-template-columns: 1fr; }
     .palette-grid { grid-template-columns: 1fr 1fr; }
     #nav-dots { display: none; }
@@ -668,9 +669,42 @@
     .spec-table tbody td { padding: 10px 12px; }
     .spec-table thead th { padding: 10px 12px; }
   }
+  @media (max-width: 480px) {
+    /* 全体余白 */
+    section { padding: 48px 16px; }
+    #s1 .hero-inner { padding: 80px 16px 48px; }
+    /* フォントサイズ */
+    #s1 h1 { font-size: clamp(32px, 12vw, 52px); }
+    h2 { font-size: clamp(22px, 7vw, 32px); }
+    /* ナビドット非表示 */
+    #nav-dots { display: none; }
+    /* 商品画像グリッド → 1列 */
+    [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+    /* spec-table横スクロール */
+    .spec-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: unset; }
+    /* パレットグリッド */
+    .palette-grid { grid-template-columns: 1fr 1fr; }
+    /* CTA */
+    .cta-buttons { flex-direction: column; align-items: stretch; }
+    .cta-btn { text-align: center; }
+    /* space-card画像高さ調整 */
+    .space-card-img { height: 200px; }
+    /* ウェルネスOEM color swatch */
+    .bouen-grid { grid-template-columns: 1fr; }
+    /* inner余白 */
+    .inner { padding: 0 4px; }
+  }
 </style>
 </head>
 <body>
+<!-- mobile-patch --><style>
+@media (max-width: 480px) {
+  img { max-width: 100%; height: auto; }
+  * { word-break: break-word; }
+  input[type="range"] { width: 100%; }
+}
+</style>
+
 
 <div id="progress-bar"></div>
 
